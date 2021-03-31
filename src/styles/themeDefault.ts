@@ -9,7 +9,7 @@ export const colorsLibrary: ObjectOfStrings = {
   shadeMid: setColor(colors.gray80),
   shadeLight: setColor(colors.gray100),
   shadeUltraLight: setColor(colors.gray190),
-  contrast: setColor(colors.blueLight),
+  hightlight: setColor(colors.blueLight),
 };
 
 const fontSizes: ObjectOfNumbers = {
@@ -36,6 +36,7 @@ export const navigationWidth = 320;
 export const paragraph = `
   color: ${colorsLibrary.shadeUltraLight};
   font-size: 0.9rem;
+  line-height: 1.3rem;
   padding: ${padding.small};
 `;
 

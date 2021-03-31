@@ -36,12 +36,6 @@ const ContentWrapper = styled.div(
   `,
 );
 
-const Content = styled.div(
-  ({ theme: { padding } }) => css`
-    padding: ${padding.small};
-  `,
-);
-
 const GoBackButton = styled(NavItem)(
   ({ theme: { colors } }) => css`
     color: ${colors.shadeUltraLight};
@@ -56,13 +50,6 @@ const GoBackButton = styled(NavItem)(
         fill: ${colors.secondary};
       }
     }
-  `,
-);
-
-const Title = styled(NavItem)(
-  ({ theme: { colors } }) => css`
-    background-color: ${colors.shadeDark};
-    border-bottom-color: transparent;
   `,
 );
 
@@ -104,11 +91,18 @@ export const NavItemWithContent: React.FC<MenuItemType> = ({ children, title }) 
               style={{ marginRight: '0.5rem' }}
               transform='scaleX(-1)'
             />
-            Go back to Menu
+            Go back
           </GoBackButton>
           <div>
-            <Title>{title}</Title>
-            <Content>{children}</Content>
+            <NavItem
+              style={{
+                color: colorsLibrary.hightlight,
+                fontWeight: 'bold',
+              }}
+            >
+              {title}
+            </NavItem>
+            <div>{children}</div>
           </div>
         </ContentWrapper>
       )}

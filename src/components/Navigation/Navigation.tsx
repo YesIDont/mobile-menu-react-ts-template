@@ -29,24 +29,67 @@ export const Navigation: React.FC = () => {
         <MenuIcon color={colorsLibrary.secondary} style={{ marginRight: '0.5rem' }} />
         Menu
       </NavItem>
+
       <NavItemWithContent title='Settings'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.
+        <NavItemWithContent title='Option 1'>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </Paragraph>
+        </NavItemWithContent>
+
+        <NavItemWithContent title='Option 2'>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </Paragraph>
+        </NavItemWithContent>
+
+        <NavItem>
+          <div>
+            Option 3<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+          </div>
+        </NavItem>
+        <NavItem>
+          <div>
+            Option 4<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+          </div>
+        </NavItem>
+        <NavItem>
+          <div>
+            Option 5<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+          </div>
+        </NavItem>
+
+        <NavItem>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </Paragraph>
+        </NavItem>
       </NavItemWithContent>
+
       <NavItemWithContent title='Users'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </Paragraph>
       </NavItemWithContent>
+
       <NavItemWithContent title='Profile'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-        labore et dolore magna aliqua.
+        <Paragraph>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+          ut labore et dolore magna aliqua.
+        </Paragraph>
       </NavItemWithContent>
+
       <NavItem>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et dolore magna aliqua.
         </Paragraph>
       </NavItem>
+
       <NavItem>
         <Paragraph>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
