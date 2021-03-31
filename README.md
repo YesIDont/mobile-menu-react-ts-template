@@ -4,7 +4,6 @@ Simple template of a mobile-like menu in static sidebar with buttons and animate
 Template is based on another template I frequently use: [link](https://github.com/YesIDont/react-type-script-template)
 
 ## Preview
-It's just that:
 <img src="./demo/menu-demo.gif" width="450" style="max-width: 100%" />
 
 ## How to?
