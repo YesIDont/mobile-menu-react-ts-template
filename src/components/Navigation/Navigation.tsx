@@ -16,7 +16,7 @@ const Container = styled.div(
     color: ${colors.secondary};
     display: flex;
     flex-direction: column;
-    height: 100vh;
+    height: 100%;
     justify-content: flex-start;
     overflow: hidden;
     position: relative;
