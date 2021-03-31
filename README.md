@@ -5,7 +5,7 @@ Template is based on another template I frequently use: [link](https://github.co
 
 ## Preview
 It's just that:
-[Short recording of the mobile menu for react](demo/menu-demo.gif)
+<img src="./demo/menu-demo.gif" width="450" style="max-width: 100%" />
 
 ## How to?
 Download repo, in your command line run:
