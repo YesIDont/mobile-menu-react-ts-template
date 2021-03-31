@@ -8,6 +8,7 @@ export const NavItem = styled.div<{ isColumn?: boolean }>(
     display: flex;
     font-size: 0.95rem;
     line-height: 1.5rem;
+    margin-right: 10px;
     padding: ${padding.small};
     text-align: left;
     transition: background-color ease 0.3s, color ease 0.3s;

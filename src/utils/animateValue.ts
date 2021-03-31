@@ -3,9 +3,16 @@ type AnimateType = {
   to: number;
   callback: (newValue: number) => void;
   duration?: number;
+  onAnimationEnd?: () => void;
 };
 
-export function animateValue({ from, to, callback, duration = 0.2 }: AnimateType): void {
+export function animateValue({
+  from,
+  to,
+  callback,
+  duration = 0.2,
+  onAnimationEnd,
+}: AnimateType): void {
   const isChangeAdditive = from < to;
   let lastUpdateTime = Date.now();
   let valueAcumulator = from;
@@ -28,6 +35,8 @@ export function animateValue({ from, to, callback, duration = 0.2 }: AnimateType
     callback(valueAcumulator);
 
     if (isAnimationComplete) {
+      if (onAnimationEnd) onAnimationEnd();
+
       return;
     }
     requestAnimationFrame(animationLoop);
