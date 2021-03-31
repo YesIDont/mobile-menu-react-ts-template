@@ -45,20 +45,14 @@ export const Navigation: React.FC = () => {
           </Paragraph>
         </NavItemWithContent>
 
-        <NavItem>
-          <div>
-            Option 3<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
-          </div>
+        <NavItem isColumn>
+          Option 3<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
         </NavItem>
-        <NavItem>
-          <div>
-            Option 4<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
-          </div>
+        <NavItem isColumn>
+          Option 4<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
         </NavItem>
-        <NavItem>
-          <div>
-            Option 5<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
-          </div>
+        <NavItem isColumn>
+          Option 5<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
         </NavItem>
 
         <NavItem>

@@ -1,7 +1,7 @@
 import styled, { css } from 'styled-components';
 
-export const NavItem = styled.div(
-  ({ theme: { colors, navigationWidth, padding } }) => css`
+export const NavItem = styled.div<{ isColumn?: boolean }>(
+  ({ isColumn, theme: { colors, navigationWidth, padding } }) => css`
     align-items: center;
     border-bottom: 1px solid ${colors.shadeMid};
     color: ${colors.secondary};
@@ -12,5 +12,10 @@ export const NavItem = styled.div(
     text-align: left;
     transition: background-color ease 0.3s, color ease 0.3s;
     width: ${navigationWidth}px;
+    ${isColumn &&
+    css`
+      align-items: flex-start;
+      flex-direction: column;
+    `}
   `,
 );
