@@ -16,7 +16,8 @@ const Container = styled.div(
     flex-direction: column;
     height: 100vh;
     justify-content: flex-start;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     position: relative;
     width: ${navigationWidth}px;
   `,
@@ -53,6 +54,13 @@ export const Navigation: React.FC = () => {
         </NavItem>
         <NavItem isColumn>
           Option 5<Paragraph>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</Paragraph>
+        </NavItem>
+
+        <NavItem>
+          <Paragraph>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+            incididunt ut labore et dolore magna aliqua.
+          </Paragraph>
         </NavItem>
 
         <NavItem>

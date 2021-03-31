@@ -3,6 +3,15 @@ Simple template of a mobile-like menu in static sidebar with buttons and animate
 
 Template is based on another template I frequently use: [link](https://github.com/YesIDont/react-type-script-template)
 
+## Preview
+It's just that:
+[Short recording of the mobile menu for react](demo/menu-demo.gif)
+
+## How to?
+Download repo, in your command line run:
+- ```yarn``` to install dependencies
+- ```yarn start``` to run dev server  
+
 ## Stack
 - React 17+
 - TypeScript 4+
