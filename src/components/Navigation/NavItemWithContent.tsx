@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 
-import { ArrowIcon } from 'components/icons/';
+import { ArrowIcon } from 'icons/';
 import { ScrollVertical } from 'components/ScrollVertical/';
 import { colorsLibrary, navigationWidth } from 'styles/themeDefault';
 import { animateValue } from 'utils/animateValue';

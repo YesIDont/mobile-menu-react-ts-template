@@ -67,6 +67,10 @@ export const GlobalStyles = createGlobalStyle`
     -moz-osx-font-smoothing: grayscale;
   }
 
+  button {
+    cursor: pointer;
+  }
+
   #root {
     width: 100%;
     height: 100%;

@@ -1,11 +1,10 @@
+import { Flex } from 'components/Flex';
 import styled, { css } from 'styled-components';
 
-export const NavItem = styled.div<{ isColumn?: boolean }>(
+export const NavItem = styled(Flex)<{ isColumn?: boolean }>(
   ({ isColumn, theme: { colors, navigationWidth, padding } }) => css`
-    align-items: center;
     border-bottom: 1px solid ${colors.shadeMid};
     color: ${colors.secondary};
-    display: flex;
     font-size: 0.95rem;
     line-height: 1.5rem;
     margin-right: 10px;
