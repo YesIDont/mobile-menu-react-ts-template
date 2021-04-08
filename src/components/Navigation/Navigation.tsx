@@ -39,6 +39,7 @@ const NavigationOpen = styled.div(
     top: 0;
     right: 0;
     width: ${navigationWidth}px;
+    transition: right ease 0.2s;
   `,
 );
 
@@ -52,68 +53,66 @@ export const Navigation: React.FC = () => {
           <MenuIcon color={colorsLibrary.secondary} />
         </OpenMenuButton>
       </NavigationClosed>
-      {isOpen && (
-        <NavigationOpen>
-          <ScrollVertical>
-            <NavItem style={{ fontWeight: 'bold', justifyContent: 'space-between' }}>
-              <Flex>
-                <MenuIcon color={colorsLibrary.secondary} style={{ marginRight: '0.5rem' }} />
-                Menu
-              </Flex>
-              <Flex as='button' type='button' onClick={() => setIsOpen(false)}>
-                <CloseIcon color={colorsLibrary.secondary} style={{ marginRight: '0.5rem' }} />
-              </Flex>
-            </NavItem>
+      <NavigationOpen style={{ right: isOpen ? 0 : `${-navigationWidth}px` }}>
+        <ScrollVertical>
+          <NavItem style={{ fontWeight: 'bold', justifyContent: 'space-between' }}>
+            <Flex>
+              <MenuIcon color={colorsLibrary.secondary} style={{ marginRight: '0.5rem' }} />
+              Menu
+            </Flex>
+            <Flex as='button' type='button' onClick={() => setIsOpen(false)}>
+              <CloseIcon color={colorsLibrary.secondary} style={{ marginRight: '0.5rem' }} />
+            </Flex>
+          </NavItem>
 
-            <Settings />
+          <Settings />
 
-            <NavItemWithContent title='Users'>
-              <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </Paragraph>
-            </NavItemWithContent>
+          <NavItemWithContent title='Users'>
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Paragraph>
+          </NavItemWithContent>
 
-            <NavItemWithContent title='Profile'>
-              <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </Paragraph>
-            </NavItemWithContent>
+          <NavItemWithContent title='Profile'>
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Paragraph>
+          </NavItemWithContent>
 
-            <NavItem>
-              <Paragraph>
-                You can place Menu items however you&apos;d like, mixing buttons that will open
-                submenus containers with plane text.
-              </Paragraph>
-            </NavItem>
+          <NavItem>
+            <Paragraph>
+              You can place Menu items however you&apos;d like, mixing buttons that will open
+              submenus containers with plane text.
+            </Paragraph>
+          </NavItem>
 
-            <NavItemWithContent title='Contact'>
-              <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </Paragraph>
-            </NavItemWithContent>
+          <NavItemWithContent title='Contact'>
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Paragraph>
+          </NavItemWithContent>
 
-            <NavItem isColumn>
-              <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </Paragraph>
-              <Paragraph>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
-                adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua.
-              </Paragraph>
-            </NavItem>
-          </ScrollVertical>
-        </NavigationOpen>
-      )}
+          <NavItem isColumn>
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Paragraph>
+            <Paragraph>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+              incididunt ut labore et dolore magna aliqua.
+            </Paragraph>
+          </NavItem>
+        </ScrollVertical>
+      </NavigationOpen>
     </>
   );
 };
