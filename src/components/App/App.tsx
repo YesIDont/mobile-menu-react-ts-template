@@ -25,7 +25,15 @@ export const App: React.FC = () => {
     <AppContainer>
       <SEO />
       <Content>
-        <ToggleSwitch id='test-checkbox'>Option with true / false value</ToggleSwitch>
+        <ToggleSwitch
+          id='test-checkbox'
+          onChange={(value: boolean, target?: HTMLInputElement) => {
+            // eslint-disable-next-line no-alert
+            if (target) alert(`Current value of the ${target.id} is: ${value}`);
+          }}
+        >
+          Option with true / false value
+        </ToggleSwitch>
       </Content>
       <Navigation />
     </AppContainer>

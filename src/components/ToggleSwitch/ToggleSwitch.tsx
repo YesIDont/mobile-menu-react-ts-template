@@ -6,6 +6,7 @@ import { Flex } from 'components/Flex';
 export const Label = styled.label(
   () => css`
     align-items: center;
+    cursor: pointer;
     display: flex;
     position: relative;
   `,
@@ -13,6 +14,7 @@ export const Label = styled.label(
 
 export const Name = styled(Flex)(
   ({ theme: { colors, padding } }) => css`
+    font-size: 0.95rem;
     margin-left: 2rem;
     padding: ${padding.small};
 
@@ -70,6 +72,7 @@ type ToggleSwitchPropsType = {
   name?: string;
   value?: string | number | readonly string[];
   disabled?: boolean;
+  onChange?: (value: boolean, target?: HTMLInputElement) => void;
 };
 
 export const ToggleSwitch: React.FC<ToggleSwitchPropsType> = ({
@@ -77,11 +80,24 @@ export const ToggleSwitch: React.FC<ToggleSwitchPropsType> = ({
   disabled,
   children,
   name,
+  onChange,
   value,
 }) => {
+  const onChangeHandler = ({ currentTarget }: React.ChangeEvent<HTMLInputElement>) => {
+    if (onChange && currentTarget && currentTarget.id === id)
+      onChange(currentTarget.checked, currentTarget);
+  };
+
   return (
     <Label htmlFor={id}>
-      <Input disabled={disabled} id={id} name={name || id} value={value || id} type='checkbox' />
+      <Input
+        disabled={disabled}
+        id={id}
+        name={name || id}
+        onChange={onChangeHandler}
+        value={value || id}
+        type='checkbox'
+      />
       <Name>{children}</Name>
     </Label>
   );
