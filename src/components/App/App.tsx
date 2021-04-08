@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 
 import { Navigation } from 'components/Navigation';
 import { SEO } from 'components/SEO';
+import { ToggleSwitch } from 'components/ToggleSwitch';
 
 export const AppContainer = styled.div(
   ({ theme: { colors } }) => css`
@@ -23,7 +24,9 @@ export const App: React.FC = () => {
   return (
     <AppContainer>
       <SEO />
-      <Content>You brand new app!</Content>
+      <Content>
+        <ToggleSwitch id='test-checkbox'>Option with true / false value</ToggleSwitch>
+      </Content>
       <Navigation />
     </AppContainer>
   );
