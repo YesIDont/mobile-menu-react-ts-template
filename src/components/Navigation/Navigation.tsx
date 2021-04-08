@@ -61,7 +61,7 @@ export const Navigation: React.FC = () => {
               Menu
             </Flex>
             <Flex as='button' type='button' onClick={() => setIsOpen(false)}>
-              <CloseIcon color={colorsLibrary.secondary} style={{ marginRight: '0.5rem' }} />
+              <CloseIcon color={colorsLibrary.secondary} />
             </Flex>
           </NavItem>
 
